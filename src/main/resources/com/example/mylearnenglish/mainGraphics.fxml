@@ -17,7 +17,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </TextArea>
-      <TextArea fx:id="ansText" layoutX="50.0" layoutY="250.0" prefHeight="150.0" prefWidth="600.0" promptText="Câu trả lời của bạn ở đây:" wrapText="true">
+      <TextArea fx:id="ansText" layoutX="50.0" layoutY="250.0" prefHeight="150.0" prefWidth="600.0" promptText="Câu trả lời của bạn ở đây:" style="-fx-text-fill: #607D8B;" wrapText="true">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
