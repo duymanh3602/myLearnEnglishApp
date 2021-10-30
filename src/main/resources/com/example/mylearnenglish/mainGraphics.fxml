@@ -23,17 +23,17 @@
          </font>
       </TextArea>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="590.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="heart3" fitHeight="40.0" fitWidth="40.0" layoutX="600.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/like.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="660.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="heart2" fitHeight="40.0" fitWidth="40.0" layoutX="670.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/like.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="730.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="heart1" fitHeight="40.0" fitWidth="40.0" layoutX="740.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/like.png" />
          </image>
