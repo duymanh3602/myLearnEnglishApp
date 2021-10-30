@@ -3,7 +3,6 @@ package com.example.mylearnenglish;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
@@ -64,11 +63,15 @@ public class mainController {
                 heart1.setImage(null);
                 Alert outOfHeart = new Alert(AlertType.ERROR);
                 outOfHeart.setTitle("You loose!");
-                outOfHeart.setHeaderText("You're ran out of Heart!");
+                outOfHeart.setHeaderText("You ran out of Heart!");
                 outOfHeart.show();
+                //System.out.println("exit code here");
             }
-
-
         }
+    }
+
+    public void speaking(MouseEvent event) throws Exception {
+        textToSpeech.ttsOnline(tempResText);
+        textToSpeech.playAudio("eng_voice.wav");
     }
 }

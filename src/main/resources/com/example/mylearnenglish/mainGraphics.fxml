@@ -22,7 +22,6 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </TextArea>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="heart3" fitHeight="40.0" fitWidth="40.0" layoutX="600.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/like.png" />
@@ -48,5 +47,11 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <ImageView fx:id="playAudio" fitHeight="80.0" fitWidth="80.0" layoutX="50.0" layoutY="461.0" onMouseClicked="#speaking" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/volume.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="270.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
