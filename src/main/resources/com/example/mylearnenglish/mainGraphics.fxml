@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: #1565C0; -fx-background-color: #2196F3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mylearnenglish.mainController">
+   <children>
+      <TextArea fx:id="resText" layoutX="50.0" layoutY="80.0" prefHeight="150.0" prefWidth="600.0" promptText="Từ cần đọc ở đây:" style="-fx-text-fill: #607D8B;" wrapText="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="ansText" layoutX="50.0" layoutY="250.0" prefHeight="150.0" prefWidth="600.0" promptText="Câu trả lời của bạn ở đây:" wrapText="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextArea>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="590.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/like.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="660.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/like.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="730.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/like.png" />
+         </image>
+      </ImageView>
+      <ToggleButton fx:id="toggle" layoutX="675.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#showRes" prefHeight="40.0" prefWidth="90.0" text="Show " textFill="#607d8b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </ToggleButton>
+      <Button layoutX="675.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#checkSubmit" prefHeight="40.0" prefWidth="90.0" text="Submit" textFill="#607d8b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
