@@ -11,12 +11,15 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.Random;
 
 public class mainController {
 
     private int numOfHeart = 3;
-    private String tempResText = "Hello everybody";
+    private int level = 1;
+    private String ResultText;
 
     @FXML
     private ToggleButton toggle;
@@ -30,6 +33,8 @@ public class mainController {
 
     public void initialize() throws FileNotFoundException {
         resText.setEditable(false);
+        resText.setText("Level: " + level);
+        ResultText = loadFile.randomWord();
         InputStream stream = new FileInputStream("src\\main\\resources\\com\\example\\image\\like.png");
         Image image = new Image(stream,40,40,false,true);
         heart1.setImage(image);
@@ -41,7 +46,7 @@ public class mainController {
         if (toggle.isSelected()) {
             toggle.setText("Hide");
             //tempResText = resText.getText();
-            resText.setText(tempResText);
+            resText.setText(ResultText);
         } else {
             toggle.setText("Show");
             resText.setText("");
@@ -50,8 +55,9 @@ public class mainController {
 
     public void checkSubmit(MouseEvent event) {
         String temp = ansText.getText();
-        if (mainFuction.check(temp,tempResText)) {
-            resText.setText(tempResText);
+        if (mainFuction.check(temp, ResultText)) {
+            resText.setText(ResultText);
+            numOfHeart = 3;
         } else {
             resText.setText("False");
             numOfHeart --;
@@ -71,7 +77,12 @@ public class mainController {
     }
 
     public void speaking(MouseEvent event) throws Exception {
-        textToSpeech.ttsOnline(tempResText);
+        //textToSpeech.ttsOnline(ResultText);
         textToSpeech.playAudio("eng_voice.wav");
+    }
+
+    public void getNewAns(MouseEvent event) throws Exception {
+        ResultText = loadFile.randomWord();
+        textToSpeech.ttsOnline(ResultText);
     }
 }

@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: #1565C0; -fx-background-color: #2196F3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mylearnenglish.mainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: #1565C0; -fx-background-color: #2196F3;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.mylearnenglish.mainController">
    <children>
       <TextArea fx:id="resText" layoutX="50.0" layoutY="80.0" prefHeight="150.0" prefWidth="600.0" promptText="Từ cần đọc ở đây:" style="-fx-text-fill: #607D8B;" wrapText="true">
          <font>
@@ -53,5 +51,10 @@
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="270.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="580.0" layoutY="466.0" onMouseClicked="#getNewAns" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/repeat.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
