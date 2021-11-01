@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: #1565C0; -fx-background-color: #2196F3;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.mylearnenglish.mainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: #1565C0; -fx-background-color: #2196F3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mylearnenglish.mainController">
    <children>
       <TextArea fx:id="resText" layoutX="50.0" layoutY="80.0" prefHeight="150.0" prefWidth="600.0" promptText="Từ cần đọc ở đây:" style="-fx-text-fill: #607D8B;" wrapText="true">
          <font>
@@ -35,12 +35,18 @@
             <Image url="@../image/like.png" />
          </image>
       </ImageView>
-      <ToggleButton fx:id="toggle" layoutX="675.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#showRes" prefHeight="40.0" prefWidth="90.0" text="Show " textFill="#607d8b">
+      <ImageView fx:id="showImg" fitHeight="50.0" fitWidth="50.0" layoutX="700.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+      <ToggleButton fx:id="toggle" layoutX="700.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#showRes" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Show " textFill="#607d8b">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </ToggleButton>
-      <Button layoutX="675.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#checkSubmit" prefHeight="40.0" prefWidth="90.0" text="Submit" textFill="#607d8b">
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="700.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/submit.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="700.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#checkSubmit" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Submit" textFill="#607d8b">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

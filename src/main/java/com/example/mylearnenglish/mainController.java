@@ -34,9 +34,16 @@ public class mainController {
     private ImageView heart1, heart2, heart3;
     @FXML
     private ImageView copy;
+    @FXML
+    private ImageView showImg;
+
+
 
 
     public void initialize() throws Exception {
+        InputStream show = new FileInputStream("src\\main\\resources\\com\\example\\image\\show.png");
+        Image showImage = new Image(show,80,80,false,true);
+        showImg.setImage(showImage);
         resText.setEditable(false);
         resText.setText("Level: " + level);
         ResultText = loadFile.randomWord();
@@ -49,16 +56,21 @@ public class mainController {
         heart3.setImage(image);
     }
 
-    public void showRes(MouseEvent event) {
+    public void showRes(MouseEvent event) throws FileNotFoundException {
         if (toggle.isSelected()) {
             toggle.setText("Hide");
-            //tempResText = resText.getText();
             resText.setText(ResultText);
             copy.setVisible(true);
+            InputStream stream = new FileInputStream("src\\main\\resources\\com\\example\\image\\hidden.png");
+            Image image = new Image(stream,80,80,false,true);
+            showImg.setImage(image);
         } else {
             toggle.setText("Show");
             resText.setText("");
             copy.setVisible(false);
+            InputStream stream = new FileInputStream("src\\main\\resources\\com\\example\\image\\show.png");
+            Image image = new Image(stream,80,80,false,true);
+            showImg.setImage(image);
         }
     }
 
