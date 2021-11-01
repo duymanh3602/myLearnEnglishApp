@@ -31,10 +31,11 @@ public class mainController {
     private ImageView heart1, heart2, heart3;
 
 
-    public void initialize() throws FileNotFoundException {
+    public void initialize() throws Exception {
         resText.setEditable(false);
         resText.setText("Level: " + level);
         ResultText = loadFile.randomWord();
+        textToSpeech.ttsOnline(ResultText);
         InputStream stream = new FileInputStream("src\\main\\resources\\com\\example\\image\\like.png");
         Image image = new Image(stream,40,40,false,true);
         heart1.setImage(image);
@@ -53,11 +54,15 @@ public class mainController {
         }
     }
 
-    public void checkSubmit(MouseEvent event) {
+    public void checkSubmit(MouseEvent event) throws Exception {
         String temp = ansText.getText();
         if (mainFuction.check(temp, ResultText)) {
             resText.setText(ResultText);
             numOfHeart = 3;
+            level ++;
+            resText.setText("Level: " + level);
+            ResultText = loadFile.randomWord();
+            textToSpeech.ttsOnline(ResultText);
         } else {
             resText.setText("False");
             numOfHeart --;
@@ -72,6 +77,8 @@ public class mainController {
                 outOfHeart.setHeaderText("You ran out of Heart!");
                 outOfHeart.show();
                 //System.out.println("exit code here");
+                outOfHeart.showAndWait();
+                System.exit(0);
             }
         }
     }
@@ -84,5 +91,13 @@ public class mainController {
     public void getNewAns(MouseEvent event) throws Exception {
         ResultText = loadFile.randomWord();
         textToSpeech.ttsOnline(ResultText);
+    }
+
+    public void copyToClipboard(MouseEvent event) {
+
+    }
+
+    public void clearAns(MouseEvent event) {
+        ansText.clear();
     }
 }
