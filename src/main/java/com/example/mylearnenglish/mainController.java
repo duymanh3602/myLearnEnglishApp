@@ -9,6 +9,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -29,12 +32,15 @@ public class mainController {
     private TextArea ansText;
     @FXML
     private ImageView heart1, heart2, heart3;
+    @FXML
+    private ImageView copy;
 
 
     public void initialize() throws Exception {
         resText.setEditable(false);
         resText.setText("Level: " + level);
         ResultText = loadFile.randomWord();
+        copy.setVisible(false);
         textToSpeech.ttsOnline(ResultText);
         InputStream stream = new FileInputStream("src\\main\\resources\\com\\example\\image\\like.png");
         Image image = new Image(stream,40,40,false,true);
@@ -48,9 +54,11 @@ public class mainController {
             toggle.setText("Hide");
             //tempResText = resText.getText();
             resText.setText(ResultText);
+            copy.setVisible(true);
         } else {
             toggle.setText("Show");
             resText.setText("");
+            copy.setVisible(false);
         }
     }
 
@@ -94,7 +102,17 @@ public class mainController {
     }
 
     public void copyToClipboard(MouseEvent event) {
+        String myString = ansText.getText();
+        StringSelection stringSelection = new StringSelection(myString);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
+    }
 
+    public void copyToClipboard2(MouseEvent event) {
+        String myString = resText.getText();
+        StringSelection stringSelection = new StringSelection(myString);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
     }
 
     public void clearAns(MouseEvent event) {
