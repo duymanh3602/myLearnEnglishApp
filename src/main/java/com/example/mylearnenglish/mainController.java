@@ -14,9 +14,7 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
-import java.util.Random;
 
 public class mainController {
 
@@ -83,6 +81,7 @@ public class mainController {
             resText.setText("Level: " + level);
             ResultText = loadFile.randomWord();
             textToSpeech.ttsOnline(ResultText);
+            //toggle.setSelected(false);
         } else {
             resText.setText("False");
             numOfHeart --;

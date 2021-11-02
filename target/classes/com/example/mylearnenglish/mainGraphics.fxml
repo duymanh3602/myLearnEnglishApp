@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: #1565C0; -fx-background-color: #2196F3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mylearnenglish.mainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="800.0" style="-fx-border-color: #1565C0; -fx-background-color: #CCCCCC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mylearnenglish.mainController">
    <children>
       <TextArea fx:id="resText" layoutX="50.0" layoutY="80.0" prefHeight="150.0" prefWidth="600.0" promptText="Từ cần đọc ở đây:" style="-fx-text-fill: #607D8B;" wrapText="true">
          <font>
@@ -51,13 +51,13 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ImageView fx:id="playAudio" fitHeight="80.0" fitWidth="80.0" layoutX="50.0" layoutY="461.0" onMouseClicked="#speaking" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="playAudio" fitHeight="80.0" fitWidth="80.0" layoutX="50.0" layoutY="426.0" onMouseClicked="#speaking" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/volume.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="270.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="580.0" layoutY="466.0" onMouseClicked="#getNewAns" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="575.0" layoutY="431.0" onMouseClicked="#getNewAns" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/repeat.png" />
          </image>
